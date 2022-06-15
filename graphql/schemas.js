@@ -6,6 +6,7 @@ enum RatioType {
  vitesse
  ange
 }
+
 type Palier {
  name: String!
  logo: String
@@ -29,6 +30,7 @@ id: Int!
  managerUnlocked: Boolean
  paliers: [Palier]
 }
+
 type World {
  name: String!
  logo: String
@@ -44,9 +46,11 @@ type World {
  angelupgrades: [Palier]
  managers: [Palier]
 }
+
 type Query {
  getWorld: World
 }
+
 type Mutation {
  acheterQtProduit(id: Int!, quantite: Int!): Product
  lancerProductionProduit(id: Int!): Product
@@ -54,5 +58,6 @@ type Mutation {
  acheterCashUpgrade(name: String!): Palier
  acheterAngelUpgrade(name: String!): Palier
  resetWorld: World
+
 }
 `
