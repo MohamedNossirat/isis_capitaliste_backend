@@ -21,21 +21,21 @@ module.exports = {
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
+                    "name": "Super dent",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
                     "idcible": 1,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Fais moi plaisir",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -47,27 +47,27 @@ module.exports = {
             "cout": 2000,
             "croissance": 1.07,
             "revenu": 3000,
-            "vitesse": 2000,
+            "vitesse": 1500,
             "quantite": 1,
             "timeleft": 0,
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
-                    "idcible": 1,
+                    "name": "Super White",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Blanchisement",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -79,27 +79,27 @@ module.exports = {
             "cout": 3000,
             "croissance": 1.07,
             "revenu": 6000,
-            "vitesse": 180000,
+            "vitesse": 2000,
             "quantite": 1,
             "timeleft": 0,
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
-                    "idcible": 1,
+                    "name": "Serrez Plus",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Serrez Encore",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -108,30 +108,30 @@ module.exports = {
             "id": 4,
             "name": "Implant Dentaire",
             "logo": "icons/store_icons/tooth_implent.svg",
-            "cout": 5000,
+            "cout": 2500,
             "croissance": 1.07,
             "revenu": 20000,
-            "vitesse": 240000,
+            "vitesse": 2500,
             "quantite": 1,
             "timeleft": 0,
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
-                    "idcible": 1,
+                    "name": "Foncez",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Foncez à fond",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -143,27 +143,27 @@ module.exports = {
             "cout": 50000,
             "croissance": 1.07,
             "revenu": 600000,
-            "vitesse": 300000,
+            "vitesse": 3000,
             "quantite": 1,
             "timeleft": 0,
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
-                    "idcible": 1,
+                    "name": "Doucement",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Easy Peasy",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -175,27 +175,27 @@ module.exports = {
             "cout": 4,
             "croissance": 1.07,
             "revenu": 1,
-            "vitesse": 360000,
+            "vitesse": 3500,
             "quantite": 1,
             "timeleft": 0,
             "managerUnlocked": false,
             "paliers": [
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
-                    "seuil": 20,
-                    "idcible": 1,
+                    "name": "Tire!",
+                    "logo": "icons/logo.png",
+                    "seuil": 10,
+                    "idcible": 6,
                     "ratio": 2,
                     "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
-                    "name": "Super Dent",
-                    "logo": "icones/logo.png",
+                    "name": "Encore!!!!!",
+                    "logo": "icons/logo.png",
                     "seuil": 20,
-                    "idcible": 1,
+                    "idcible": 6,
                     "ratio": 2,
-                    "typeratio": "vitesse",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ]
@@ -261,9 +261,18 @@ module.exports = {
     ],
     "allunlocks": [
         {
-            "name": "Super Dent",
-            "logo": "icons/allunlocks/1.svg",
-            "seuil": 1000,
+            "name": "La Vitesseur",
+            "logo": "icons/allunlocks/2.svg",
+            "seuil": 100,
+            "idcible": 0,
+            "ratio": 10,
+            "typeratio": "vitesse",
+            "unlocked": false
+        },
+        {
+            "name": "La Gain",
+            "logo": "icons/allunlocks/3.svg",
+            "seuil": 200,
             "idcible": 0,
             "ratio": 10,
             "typeratio": "gain",
@@ -273,8 +282,8 @@ module.exports = {
     "upgrades": [
         {
             "name": "Nom du premier upgrade",
-            "logo": "",
-            "seuil": 1e3,
+            "logo": "icons/logo.png",
+            "seuil": 100,
             "idcible": 1,
             "ratio": 3,
             "typeratio": "gain",
@@ -284,7 +293,7 @@ module.exports = {
     "angelupgrades": [
         {
             "name": "Angel Sacrifice",
-            "logo": "icones/angel.png",
+            "logo": "icons/angel.png",
             "seuil": 10,
             "idcible": 0,
             "ratio": 3,

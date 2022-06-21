@@ -56,37 +56,6 @@ function updateMonde(context) {
   return context;
 }
 
-/*function updateMonde(context) {
-  let world = context.world;
-  let products = world.products;
-
-  let gain = 0;
-  let temps_depuis_last_update = Date.now() - parseInt(world.lastupdate);
-
-  products.forEach((prod) => {
-    let exemples = 0;
-    if (prod.timeleft !== 0) {
-      if (prod.managerUnlocked) {
-        prod.timeleft -= temps_depuis_last_update;
-        exemples = temps_depuis_last_update % prod.vitesse;
-        gain =
-          (temps_depuis_last_update % prod.vitesse) *
-          prod.quantite*prod.revenu *
-          (world.angelbonus * world.activeangels);
-      } else if (prod.timeleft < 0) {
-        prod.timeleft = 
-        gain = prod.revenu * (world.angelbonus * world.activeangels);
-      }
-    }
-  });
-
-  world.money += gain;
-  world.score += gain;
-  world.lastupdate = parseInt(Date.now());
-
-  saveWorld(context);
-}*/
-
 module.exports = {
   Query: {
     getWorld(parent, args, context, info) {
@@ -97,12 +66,14 @@ module.exports = {
   },
   Mutation: {
     lancerProductionProduit(parent, args, context, info) {
+      context = updateMonde(context);
       let product = context.world.products.find((p) => p.id === args.id);
       product.timeleft = product.vitesse;
-      context = updateMonde(context);
       saveWorld(context);
     },
+
     acheterQtProduit(parent, args, context, info) {
+      context = updateMonde(context);
       let product = context.world.products.find((p) => p.id === args.id);
       product.quantite = product.quantite + args.quantite;
       context.world.money -= Math.round(
@@ -110,7 +81,43 @@ module.exports = {
           (1 - product.croissance)
       );
       product.cout = product.cout * Math.pow(product.croissance, args.quantite);
-      context = updateMonde(context);
+      product.paliers.forEach((palier) => {
+        if (!palier.unlocked) {
+          if (
+            product.quantite >= palier.seuil &&
+            palier.typeratio === "vitesse"
+          ) {
+            product.vitesse /= palier.ratio;
+          }
+          if (product.quantite >= palier.seuil && palier.typeratio === "gain") {
+            product.revenu *= palier.ratio;
+          }
+        }
+      });
+      context.world.allunlocks.forEach((unlock) => {
+        if (!unlock.unlocked) {
+          if (
+            context.world.products.every(
+              (product) => product.quantite >= unlock.seuil
+            )
+          ) {
+            context.world.products.forEach((product) => {
+              if (
+                product.quantite >= unlock.seuil &&
+                unlock.typeratio === "vitesse"
+              ) {
+                product.vitesse /= unlock.ratio;
+              }
+              if (
+                product.quantite >= unlock.seuil &&
+                unlock.typeratio === "gain"
+              ) {
+                product.revenu *= unlock.ratio;
+              }
+            });
+          }
+        }
+      });
       saveWorld(context);
     },
     engagerManager(parent, args, context, info) {
